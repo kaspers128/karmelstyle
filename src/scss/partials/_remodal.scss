@@ -1,0 +1,92 @@
+.remodal-close {
+  background-image: url(../img/icon/window-close.png);
+  background-size: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 18px;
+  left: auto;
+  top: 18px;
+  &:before {
+    display: none;
+  }
+  &:hover {
+    opacity: .75;
+  }
+}
+
+.remodal {
+  border-radius: 6px;
+  padding: 32px;
+
+  .remodal-title {
+    font-size: 36px;
+    color: #d32f58;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: HelveticaNeueCyr-Roman;
+  }
+
+  .remodal-description {
+    border-radius: 6px;
+    border: 2px solid #d32f58;
+    padding: 36px;
+    box-sizing: border-box;
+
+
+    .buttons-control {
+      margin-top: 60px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        border-radius: 6px;
+        border: 2px solid #5aa740;
+        width: 48%;
+        padding: 14px 0;
+        color: #5aa740;
+        font-family: HelveticaNeueCyr;
+        &:hover {
+          background: #5aa740;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .ordering-client-block {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  p.form-title {
+    text-align: left;
+    font-family: HelveticaNeueCyr-Medium;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .success-order-text {
+    margin: 12px 0 24px;
+    padding: 0 60px;
+    box-sizing: border-box;
+    p {
+      font-size: 24px;
+      font-family: HelveticaNeueCyr-Light;
+      margin-bottom: 10px;
+    }
+  }
+
+  & > .btn-default {
+    display: inline-flex;
+  }
+
+}
+
+@media only screen and (min-width: 641px) {
+  .remodal {
+    max-width: 780px;
+  }
+}

@@ -1,0 +1,48 @@
+<form action="" class="form-contacts">
+    <div class="row mb20">
+        <div class="col-sm-12">
+            <h4>Напишите нам</h4>
+        </div>
+        <div class="col-md-4">
+            <div class="flex align-items-center">
+                <label for="name1" class="w120"><span class="text-selected">*</span> Имя</label>
+                <input type="text" id="name1" name="name1" class="form-control" placeholder="Как вас зовут?" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="flex align-items-center">
+                <label for="email1"><span class="text-selected">*</span> Email</label>
+                <input type="text" id="email1" name="email1" class="form-control" placeholder="Ваш email?" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="flex align-items-center">
+                <label for="phone1"><span class="text-selected">*</span> Телефон</label>
+                <input type="text" id="phone1" name="phone1" class="form-control" placeholder="Ваш телефон?" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="flex align-items-start">
+                <label for="message1" class="w120"><span class="text-selected">*</span> Сообщение</label>
+                <textarea name="message1" id="message1" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row mt20">
+        <div class="w120"></div>
+        <div class="col-md-4">
+            <p>Введите код, указанный на картинке:</p>
+            <div class="flex align-items-center">
+                <img src="./img/captcha.png" class="bloc" alt="">
+                <input type="text" id="captcha" name="captcha" class="form-control captcha" placeholder="" />
+            </div>
+            <div class="flex mt20 mb20">
+                <input type="checkbox" name="politika" id="politika" id="">
+                <label for="politika" class="label-politika">Согласен с <a href="politika.html">Правилами обработки персональных данных и Политикой конфиденсиальности</a></label>
+            </div>
+            <button class="style-btn2">Отправить</button>
+        </div>
+    </div>
+</form>

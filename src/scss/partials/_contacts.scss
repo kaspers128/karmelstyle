@@ -1,0 +1,71 @@
+.form-contacts {
+
+    @include tablets {
+        [class^='col-'] {
+            margin-bottom: 20px;
+        }
+    }
+
+    label {
+        margin-right: 10px;
+        width: 100px;
+        text-align: right;
+        @include tablets {
+            text-align: left;
+            width: 100%;
+        }
+    }
+
+    label.label-politika {
+        margin-right: 0;
+        margin-left: 10px;
+        width: calc(100% - 30px);
+        text-align: left;
+    }
+
+    .w120 {
+        width: 120px;
+        margin-right: 10px;
+        text-align: left;
+        @include tablets {
+            width: 100%;
+        }
+    }
+
+
+
+    .form-control {
+        width: calc(100% - 110px);
+        @include tablets {
+            width: 100%;
+        }
+        //width: 69%;
+    }
+
+    .w120 + .form-control {
+        width: calc(100% - 130px);
+        @include tablets {
+            width: 100%;
+        }
+    }
+
+    
+    textarea.form-control {
+        width: calc(100% - 130px);
+        height: 150px;
+        padding: 10px;
+        @include tablets {
+            width: 100%;
+        }
+    }
+
+    .form-control.captcha {
+        width: 140px;
+        margin-left: 10px;
+        height: 35px;
+    }
+
+    .style-btn2 {
+        min-width: 160px;
+    }
+}

@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $ffRegular;
+    background-color: #efefef;
+    font-size: $fzRegular;
+    @include desktop-normal {
+        font-size: 1.6rem;
+    }
+}
+
+.container {
+    @include min-desktop {
+        max-width: 100%;
+    }
+    @include min-desktop-normal {
+        max-width: 1396px;
+    }
+}
+
+a {
+    color: #000;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+strong, .bold {
+    font-family: $ffBold;
+}
+
+.form-control {
+    height: 45px;
+    padding-left: 1rem;
+    background: #efefef;
+    border-radius: 6px;
+    border: none;
+}
+
+ol {
+    padding-left: 1.5rem;
+
+    li{
+        &::marker {
+            color: $primaryColor;
+        }
+    }
+}
+
+.ulstyle {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    li {
+        a {
+            display: block;
+            background-color: $primaryColor;
+            color: #fff;
+            padding: .9rem 1.5rem .8rem;
+            border: 2px solid #fffffe;
+            border-radius: 6px;
+            font-family: $ffMedium;
+            text-decoration: none;
+
+            @include desktop-normal {
+                padding: .6rem 1.5rem .6rem;
+            }
+        }
+    }
+}
+
+.style-btn {
+    @include style-btn(#5aa740);
+}
+
+.style-btn_pink {
+    @include style-btn($primaryColor);
+}
+
+.style-btn2 {
+    @include style-btn2(#5aa740);
+}
+
+.color-main {
+    color: $primaryColor;
+}
+
+.color-dop {
+    color: $secondColor;
+}
+
+.color-dop2 {
+    color: #cf6600;
+}
+
+.section {
+    margin-top: 2.5rem;
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+.section:first-child,
+.breadcrumbs-block+.section {
+    margin-top: 0;
+}
+
+.main {
+    background-color: #efefef;
+}
+
+.section {
+    ul.ulstyle2 {
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: .7rem;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 5px;
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: $primaryColor;
+            }
+        }
+    }
+}
+
+.section-default {
+    &__inner {
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+.section-default_width {
+    background-color: #fff;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.6rem;
+    color: $primaryColor;
+    text-transform: uppercase;
+    @include desktop-normal {
+        font-size: 3rem;
+    }
+    @include phones {
+        margin-bottom: 1rem;
+    }
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: $ffMedium;
+    font-size: 3.6rem;
+    color: $primaryColor;
+    margin-bottom: 3rem;
+    @include desktop-normal {
+        font-size: 3rem;
+    }
+    @include phones {
+        margin-bottom: 1rem;
+    }
+}
+
+.home h2 {
+    text-align: center;
+}
+
+h3 {
+    color: $primaryColor;
+    font-size: $fzLarge;
+    margin-bottom: 2rem;
+    @include desktop-normal {
+        font-size: 2rem;
+    }
+    @include desktop {
+        font-size: 1.8rem;
+    }
+}
+
+h4 {
+    font-size: $fzLarge;
+    font-family: $ffMedium;
+    margin-bottom: 2rem;
+    @include desktop-normal {
+        font-size: 2rem;
+    }
+    @include desktop {
+        font-size: 1.8rem;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-large {
+    font-size: $fzLarge;
+    @include desktop-normal {
+        font-size: 2rem;
+    }
+    @include desktop {
+        font-size: 1.8rem;
+    }
+}
+
+.text-ffmedium {
+    font-family: $ffMedium;
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-selected {
+    color: $primaryColor;
+}
+
+.text-gray {
+    color: #7e7e7e;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.carousel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    margin-top: 3rem;
+    border-top: 2px solid #c9c9c9;
+
+    &__link {
+        margin: 0 .5rem;
+    }
+
+    &__link_owl {
+        width: 35px;
+    }
+
+    &__link_all {
+        display: flex;
+        align-items: center;
+        min-width: 175px;
+        padding: 0 1rem;
+        font-size: $fzLarge;
+    }
+}
+
+.block {
+    display: block;
+}
+
+.fl-left {
+    float: left;
+}
+
+.mr10 {
+    margin-right: 1rem;
+}
+
+.mt10 {
+    margin-top: 1rem;
+}
+
+.mb20 {
+    margin-bottom: 2rem;
+}
+
+.mt20 {
+    margin-top: 2rem;
+}
+
+.mb0 {
+    margin-bottom: 0;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.pl20 {
+    padding-left: 2rem;
+}
+
+.flex {
+    display: flex;
+    @include phones {
+        flex-wrap: wrap;
+    }
+
+    li {
+        margin: 0 1rem 1rem 0;
+    }
+}
+
+.flex_wrap {
+    flex-wrap: wrap;
+}
+
+.page {
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.select {
+    padding: .5rem 3rem .5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #878787;
+    appearance: none;
+    background: url(../img/icon/icon_select3.png) no-repeat;
+    background-position: right 1rem center;
+}
+
+.input-item {
+    margin-right: 3rem;
+
+    label {
+        padding-right: 1rem;
+    }
+}
+
+.border-b {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.aside {
+    width: 320px;
+}
+
+.table-style {
+    border-collapse: collapse;
+    
+    thead {
+        background: #9f9f9f;
+    }
+
+    th, td {
+        padding: 1rem 2.5rem;
+        border: 1px solid #d3d3d3;
+    }
+    
+    td {
+        text-align: center;
+    }
+    
+    th {
+        font-family: $ffMedium;
+        color: #fff;
+    }
+}
+
+blockquote {
+    position: relative;
+    padding: 2.7rem .2rem 1rem 2.6rem;
+    font-family: 'HelveticaNeueCyr-LightItalic', $ffRegular;
+
+    &::after, &::before {
+        content: '”';
+        font-size: 6rem;
+        font-family: $ffBold;
+        position: absolute;
+        right: 0;
+    }
+
+    &::before {
+        right: auto;
+        left: 0;
+        top: 0;
+        transform: rotate(180deg);
+        line-height: 1;
+        height: 23px;
+    }
+}
+
+.bg-gray {
+    background-color: #ebebeb;
+    border-radius: 6px;
+    padding: 2.5rem 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.style-input {
+    @include style-input(#6eac59);
+}
+
+.w100 {
+    width: 100%;
+}
+
+.w120 {
+    width: 120px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+.slick-slide {
+    padding: 0 10px;
+}
+
+section.nomargintop,
+.nomargintop {
+    margin-top: 0;
+}
+
+.hidden {
+    overflow: hidden;
+}

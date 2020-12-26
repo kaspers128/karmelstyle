@@ -1,0 +1,36 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap-grid.css';
+@import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/remodal/src/remodal.css';
+@import '../../node_modules/remodal/src/remodal-default-theme.css';
+
+@import './partials/variable';
+@import './partials/mixin';
+@import './partials/media-mixin';
+@import './partials/app';
+@import './partials/fonts';
+@import './partials/header';
+@import './partials/slider';
+@import './partials/brands';
+@import './partials/advantages';
+@import './partials/products';
+@import './partials/video-text';
+@import './partials/social';
+@import './partials/seo-text';
+@import './partials/reviews';
+@import './partials/blog';
+@import './partials/subscribe';
+@import './partials/footer';
+
+@import './partials/breadcrumbs';
+@import './partials/catalog';
+@import './partials/about';
+@import './partials/dostavka';
+@import './partials/collection';
+@import './partials/contacts';
+
+@import './partials/cart';
+@import './partials/product-card';
+@import './partials/ordering';
+@import './partials/remodal';
+
+@import './partials/politika';

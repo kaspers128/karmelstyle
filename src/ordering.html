@@ -1,0 +1,239 @@
+---
+layout: default
+title: Karmelstyle | Ordering
+classPage: page
+---
+
+//= ./html/modules/breadcrumbs.html
+
+<section class="section section-cart">
+    <div class="container">
+        <div class="section-default__inner">
+            <h1>ОФОРМЛЕНИЕ ЗАКАЗА</h1>
+
+            <form action="">
+
+                <div class="ordering-form">
+                    <div class="ordering-header">
+                        <div class="image"></div>
+                        <div class="title">
+                            Название товара
+                        </div>
+                        <div class="model">
+                            Модель
+                        </div>
+                        <div class="counter">
+                            Количество
+                        </div>
+                        <div class="price">
+                            Цена за единицу товара
+                        </div>
+                        <div class="sum">
+                            Итого
+                        </div>
+                    </div>
+                    <div class="ordering-list">
+                        <div class="ordering-list-item">
+                            <div class="information values">
+                                <div class="image">
+                                    <img src="./img/product1.png" alt="фото товара">
+                                </div>
+                                <div class="title">
+                                    Зимнее длинное пальто с капюшоном и мехом норки
+                                    <div class="additional-info">
+                                        Размер: 56; Цвет: серый
+                                    </div>
+                                </div>
+                                <div class="model">
+                                    ЕП 1502 М
+                                </div>
+                                <div class="counter">
+                                    <div class="product-cart-counter">
+                                        <a href="" class="m">-</a>
+                                        <input type="text" value="1" name="counter[1]">
+                                        <a href="" class="p">+</a>
+                                    </div>
+                                </div>
+                                <div class="price" data-price="10500">
+                                    10 500 ₽
+                                </div>
+                                <div class="sum">
+                                    <span>10 500</span> ₽
+                                </div>
+                            </div>
+                            <div class="control">
+                                <a href="#" class="delete">удалить с корзины</a>
+                            </div>
+                        </div>
+                        <div class="ordering-list-item">
+                            <div class="information values">
+                                <div class="image">
+                                    <img src="./img/product2.png" alt="фото товара">
+                                </div>
+                                <div class="title">
+                                    Зимнее длинное пальто
+
+                                    <div class="additional-info">
+                                        Размер: 54; Цвет: серый
+                                    </div>
+                                </div>
+                                <div class="model">
+                                    ИМ 142
+                                </div>
+                                <div class="counter">
+                                    <div class="product-cart-counter">
+                                        <a href="" class="m">-</a>
+                                        <input type="text" value="1" name="counter[2]">
+                                        <a href="" class="p">+</a>
+                                    </div>
+                                </div>
+                                <div class="price" data-price="14500">
+                                    14 500 ₽
+                                </div>
+                                <div class="sum">
+                                    <span>14 500</span> ₽
+                                </div>
+                            </div>
+                            <div class="control">
+                                <a href="#" class="delete">удалить с корзины</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-information">
+                        <div class="promo">
+                            Промокод: <input type="text">
+                            <div class="promo-info">
+                                Информация о промокоде
+                            </div>
+                        </div>
+
+                        <div class="cart-total">
+                            <div class="cart-total-values">
+                                Кол-во товаров: <span class="count">3</span>, стоимость заказа: <span class="old-price">54 000 ₽</span>
+                                <span class="price"><span class="value">55 000</span> ₽</span>
+                            </div>
+
+                            <a href="" class="recalculate">Пересчитать</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ordering-client">
+                    <div class="ordering-client-block">
+                        <p>Контакты</p>
+
+                        <div class="ordering-field">
+                            <span class="required">*</span>
+                            <label for="last_name">Фамилия</label>
+                            <input type="text" id="last_name" placeholder="Иванова" required>
+                        </div>
+
+                        <div class="ordering-field">
+                            <span class="required">*</span>
+                            <label for="first_name">Имя, отчество</label>
+                            <input type="text" id="first_name" placeholder="Мария Алексеевна" required>
+                        </div>
+
+                        <div class="ordering-field">
+                            <span class="required">*</span>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" required>
+                        </div>
+
+
+                        <div class="ordering-field">
+                            <span class="required">*</span>
+                            <label for="phone">Телефон</label>
+                            <input type="text" id="phone" required>
+                        </div>
+
+                    </div>
+
+                    <div class="ordering-client-block">
+                        <p>Адрес доставки</p>
+
+                        <div class="ordering-field">
+                            <span class="required">*</span>
+                            <label for="city">Город</label>
+                            <input type="text" id="city" required>
+                        </div>
+
+                        <div class="ordering-field">
+                            <label for="postcode">Почтовый индекс</label>
+                            <input type="text" id="postcode">
+                        </div>
+
+                        <div class="ordering-field">
+                            <span class="required">*</span>
+                            <label for="address">Адрес</label>
+                            <textarea id="address" required></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="ordering-client-block agreement">
+                        <p>Способ доставки</p>
+
+
+                        <div class="ordering-client-block-half">
+                            <div class="ordering-field">
+                                <input type="radio" name="delivery_type" id="delivery_type_1" checked>
+                                <label for="delivery_type_1">
+                                    Доставка курьером по москве
+                                    <div class="additionally">бесплатно</div>
+                                </label>
+                            </div>
+
+                            <div class="ordering-field">
+                                <input type="radio" name="delivery_type" id="delivery_type_2">
+                                <label for="delivery_type_2">
+                                    Самовывоз из офиса
+                                    <div class="additionally">бесплатно</div>
+                                </label>
+                            </div>
+
+                            <div class="ordering-field">
+                                <input type="radio" name="delivery_type" id="delivery_type_3">
+                                <label for="delivery_type_3">
+                                    Почта России
+                                    <div class="additionally"><a href="">рассчитать</a></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="ordering-client-block-half">
+
+                            <div class="ordering-field">
+                                <input type="checkbox" name="agreement[1]" id="agreement_1">
+                                <label for="agreement_1">Я прочитал и согласен с правилами <a href="">Заказ и возврат товара</a></label>
+                            </div>
+
+                            <div class="ordering-field">
+                                <input type="checkbox" name="agreement[2]" id="agreement_2">
+                                <label for="agreement_2">Я прочитал и согласен с правилами <a href="">политики обработки персональных данных</a></label>
+                            </div>
+
+                            <div class="ordering-field">
+                                <input type="checkbox" name="agreement[3]" id="agreement_3">
+                                <label for="agreement_3">Создать личный кабинет на сайте</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="ordering-issue">
+                    <input type="submit" value="Оформить заказ">
+                </div>
+
+
+
+            </form>
+
+        </div>
+    </div>
+</section>

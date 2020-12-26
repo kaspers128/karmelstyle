@@ -1,0 +1,363 @@
+.header {
+    background-color: #fff;
+    padding-bottom: 2rem;
+
+    &-top {
+        background-color: #112337;
+        padding: 1rem 0;
+
+        &__left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            @include tablets {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__text {
+        color: #fff;
+        margin-left: 2rem;
+        @include tablets {
+            margin: 2rem 0;
+        }
+    }
+
+    .ulstyle {
+        @include tablets {
+            flex-wrap: wrap;
+        }
+        @include phones {
+            flex-wrap: unset;
+        }
+
+        li {
+            margin-left: 1rem;
+            @include tablets {
+                margin-left: 0;
+            }
+
+            @include phones {
+                margin-left: 1rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        @include desktop {
+            float: right;
+        }
+        a {
+            @include tablets {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+        }
+        
+    }
+
+    &-middle {
+        padding: .5rem 0 1rem;
+
+        &__phone {
+            display: flex;
+            @include desktop {
+                flex-direction: column;
+                align-items: flex-end;
+                text-align: right;
+            }
+            
+            @include phones {
+                flex-direction: row;
+                justify-content: space-around;
+                margin-bottom: 2rem;
+            }
+
+            a {
+                display: block;
+                margin-right: 2.5rem;
+                color: #000;
+                text-decoration: none;
+                font-size: 3rem;
+                font-family: $ffMedium;
+                @include desktop-normal {
+                    font-size: 2.5rem;
+                }
+                @include desktop {
+                    font-size: 1.8rem;
+                    margin-bottom: 1rem;
+                    margin-right: 0;
+                }
+                @include tablets {
+                    margin-bottom: 0;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                
+            }
+        }
+    }
+
+    &-bottom {
+        margin-top: 1rem;
+        padding: 1.5rem 0;
+        position: relative;
+        box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.23);
+
+        &::before, &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 120px;
+                height: 150%;
+                top: -25%;
+                background: none;
+                background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 96%, rgba(255,255,255,0) 100%);
+            
+                @include phones {
+                    width: 0;
+                }
+        }
+
+        &::after {
+            left: auto;
+            right: 0;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 4%, rgba(255,255,255,1) 100%);
+        }
+    }
+
+    .callback {
+        margin-top: -2rem;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    @include tablets {
+        margin-bottom: 2rem;
+    }
+    @include phones {
+        display: block;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 0;
+    }
+
+    &__item {
+        margin-right: 4rem;
+        position: relative;
+        @include desktop {
+            margin-right: 2rem;
+        }
+
+        @include min-tablets {
+            &:hover .submenu{
+                transform: scaleY(1);
+            }    
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:first-child {
+
+            & > a {
+                color: $primaryColor;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    margin-left: .5rem;
+                    width: 13px;
+                    height: 12px;
+                    background: url(../img/icon/icon_catalog.png) no-repeat;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            a {
+                color: $secondColor;
+            }
+        }
+    }
+
+    &__link {
+        font-size: $fzLarge;
+        font-family: $ffMedium;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+        @include desktop-normal {
+            font-size: 2rem;
+        }
+        @include desktop {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.submenu {
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    min-width: 300px;
+    top: 20px;
+    box-shadow: 0px 11px 12px 1px rgba(0, 0, 0, 0.288);
+
+    @include min-tablets {
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        transition: all .5s;
+    }
+
+    @include tablets {
+        display: none;
+        transform: scaleY(1);
+        box-shadow: none;
+        position: static;
+    }
+
+    &.active {
+        transform: scaleY(1);
+    }
+
+    li {
+        margin-bottom: 8px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.soc-top {
+    display: flex;
+    list-style: none;
+
+    li {
+        margin-right: 1.5rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            display: block;
+        }
+
+        img {
+            display: block;
+
+            @include desktop-normal {
+                width: 33px;
+            }
+        }
+    }
+}
+
+.logo {
+    &__link {
+        text-decoration: none;
+        font-size: 2rem;
+        color: #010101;
+        @include desktop-normal {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.search {
+    width: 320px;
+    position: relative;
+
+    @include phones {
+        margin: 2rem 0;
+    }
+
+    @include desktop {
+        width: 100%;
+    }
+
+    &__btn {
+        position: absolute;
+        width: 26px;
+        background: none;
+        border: none;
+        right: 10px;
+        top: 9px;
+    }
+}
+
+.menu-icon {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1;
+    @include desktop {
+        align-items: center;
+    }
+
+    &.menu-icon_without-decoration {
+        span {
+            text-decoration: none;
+        }
+    }
+
+    &__item {
+        margin-right: 2.5rem;
+        @include phones {
+            margin-right: .5rem;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        span {
+            text-decoration: underline;
+            color: #000;
+
+            &.menu-icon__izb{
+                color: $primaryColor;
+            }
+
+            &.menu-icon__cart{
+                color: #cf6600;
+            }
+
+            &.menu-icon__lk{
+                color: $secondColor;
+            }
+        }
+
+        img {
+            height: 25px;
+            margin-right: .5rem;
+        }
+    }
+}

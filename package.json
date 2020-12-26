@@ -1,0 +1,41 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.1",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.1.0",
+    "gulp-watch": "^5.0.1",
+    "node-sass": "^4.14.1",
+    "panini": "^1.7.1",
+    "webpack": "^5.6.0",
+    "webpack-stream": "^6.1.1",
+    "gulp-cssbeautify": "^3.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "del": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "imagemin-pngquant": "^9.0.0",
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1",
+    "owl.carousel": "^2.3.4",
+    "remodal": "^1.1.1"
+  }
+}

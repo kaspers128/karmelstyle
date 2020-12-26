@@ -1,0 +1,300 @@
+.catalog-desc {
+    &__text {
+        font-size: $fzLarge;
+        line-height: 30px;
+        margin-top: 1.5rem;
+        @include desktop-normal {
+            font-size: 2rem;
+            line-height: 25px;
+        }
+        @include desktop {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+ul.subcat {
+    margin-bottom: 3.5rem;
+
+    li {
+        padding: 0;
+        margin-right: .8rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+ul.pagination {
+    display: flex;
+    list-style: none;
+
+    li {
+        padding-left: 0;
+        margin: 0 .5rem;
+
+        &:before {
+            display: none;
+        }
+
+        a {
+            @extend .style-btn;
+
+            &.active, &:hover {
+                color: #fff;
+                border-color: $secondColor;
+                background-color: $secondColor;
+            }
+        }
+
+        span {
+            height: 100%;
+            color: $secondColor;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+.catalog {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2.5rem;
+
+    @include tablets {
+        flex-direction: column;
+    } 
+}
+
+.catalog__aside {
+    margin-right: 2rem;
+    @include tablets {
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        z-index: 10;
+        background: #fff;
+        padding: 2rem;
+        overflow: scroll;
+        transition: all .5s;
+    }
+    &.active {
+        left: 0;
+    }
+}
+
+.aside-item {
+    &__title {
+        font-size: $fzLarge;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+        font-family: $ffMedium;
+        @include desktop-normal {
+            font-size: 2rem;
+        }
+        @include desktop {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.aside-ul {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+
+    &__item {
+        margin-bottom: .8rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: $fzLarge;
+        color: #000;
+        &.active, &:hover {
+            color: $primaryColor;
+        }
+        @include desktop-normal {
+            font-size: 2rem;
+        }
+        @include desktop {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.filter {
+    &__name {
+        font-size: $fzLarge;
+        margin-bottom: 1rem;
+        @include desktop-normal {
+            font-size: 2rem;
+        }
+        @include desktop {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__item {
+        font-size: $fzLarge;
+        margin-bottom: 4.5rem;
+        @include desktop-normal {
+            font-size: 2rem;
+        }
+        @include desktop {
+            font-size: 1.8rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__opt_flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    &__opt_flex_5 {
+        .filter__line {
+            width: 17%;
+            margin-right: 3%;
+
+            &:nth-child(5n+5) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__opt_flex_3 {
+        .filter__line {
+            width: 30%;
+            margin-right: 5%;
+            align-items: center;
+            
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            display: block;
+        }
+    }
+    
+    &__line {
+        margin-bottom: 1.5rem;
+
+        input[type=checkbox] {
+            width: 20px;
+            height: 20px;
+            margin-right: .5rem;
+        }
+    }
+}
+
+.products-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: calc(100% - 340px);
+
+    @include tablets {
+        width: 100%;
+    }
+
+    .product {
+        width: 30%;
+        margin-right: 5%;
+        margin-bottom: 2rem;
+        @include min-desktop {
+            &:nth-child(3n + 3) {
+                margin-right: 0;
+            }
+        } 
+        @include desktop {
+            width: 48%;
+            margin-right: 4%;
+            &:nth-child(2n + 2) {
+                margin-right: 0;
+            }
+        }
+        @include phones {
+            width: 100%;
+            margin-right: 0;
+        }
+           
+    }
+}
+
+.sort-view {
+    @include phones {
+        margin-bottom: 2rem;
+    }
+
+    .input-item {
+        @include phones {
+            margin: 0 0 2rem;
+        }
+    }
+}
+
+.aside-view {
+    display: none;
+    width: 100%;
+    padding: 13px 10px 8px;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $ffMedium;
+    font-size: 2rem;
+    background: $secondColor;
+    color: #fff;
+    border-radius: 6px;
+    @include tablets {
+        display: block;
+    }
+}
+
+.aside__close {
+    display: none;
+    position: absolute;
+    right: 20px;
+    font-size: 25px;
+    font-family: $ffBold;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background: $secondColor;
+    color: #fff;
+    border-radius: 50%;
+    padding-top: 5px;
+    @include tablets {
+        display: flex;
+    }
+}
+
+.back-coll {
+    display: block;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #e20000;
+    font-size: 2rem;
+
+    @include desktop {
+        font-size: 1.8rem;
+    }
+    @include tablets {
+        font-size: 1.6rem;
+    }
+}

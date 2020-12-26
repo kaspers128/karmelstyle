@@ -1,0 +1,32 @@
+.breadcrumbs-block {
+    padding: 1rem 0;
+}
+
+.breadcrumbs {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__item {
+        margin-right: .7rem;
+
+        &:last-child {
+            margin-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &:after {
+            content: '\00bb';
+            color: $primaryColor;
+        }
+    }
+
+    &__text {
+        color: #000;
+        text-decoration: none;
+    }
+}

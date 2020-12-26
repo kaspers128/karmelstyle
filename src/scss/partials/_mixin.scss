@@ -1,0 +1,41 @@
+@mixin border-red {
+    border: 2px solid #d32f58;
+    border-radius: 6px;
+}
+
+@mixin style-btn ($color) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: $color;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 0 10px;
+    height: 35px;   
+}
+
+@mixin style-btn2($color) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 10px;
+    height: 35px;
+    background-color: $color;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+}
+
+@mixin style-input($color) {
+    font-size: 24px;
+    height: 35px;
+    padding: 0px 10px;
+    border: 2px solid $color;
+    border-radius: 6px;
+}

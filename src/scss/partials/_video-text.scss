@@ -1,0 +1,38 @@
+.video-text {
+    padding: 4.5rem 0;
+
+    @include phones {
+        padding: 3rem 0;
+    }
+
+    .main-text {
+
+        @include phones {
+            margin: 2rem 0 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5rem;
+            line-height: 40px;
+
+            @include phones {
+                margin-bottom: 2rem;
+            }
+        }
+
+        p {
+            text-align: justify;
+            font-size: 2rem;
+            line-height: 25px;
+
+            @include phones {
+                margin-bottom: 1.8rem;
+            }
+        }
+
+        .style-btn {
+            float: right;
+        }
+    }
+}

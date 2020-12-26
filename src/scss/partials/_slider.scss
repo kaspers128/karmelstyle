@@ -1,0 +1,70 @@
+.slider {
+    &.section {
+        margin-top: 0;
+    }
+
+    &__item {
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        button {
+            cursor: pointer;
+            font-size: 0;
+            display: block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin: 0 10px;
+            border: 1px solid #cfcecd;
+            background: #94908d;
+            opacity: .5;
+            @include tablets {
+                width: 15px;
+                height: 15px;
+                margin: 0 5px;
+            }
+        }
+        .slick-active button {
+            opacity: 1;
+            background: #d87b26;
+        }
+    }
+    
+    .slick-arrow {
+        cursor: pointer;
+        font-size: 0;
+        display: block;
+        width: 46px;
+        height: 46px;
+        border: none;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        background: url(../img/icon/icon_slider1.png) no-repeat;
+    
+        &.slick-next {
+            left: auto;
+            right: 20px;
+            background-image: url(../img/icon/icon_slider2.png);
+        }
+    
+        @include tablets {
+            width: 25px;
+            height: 25px;
+            background-size: cover;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.subscribe {
+    padding: 2rem 0;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        img {
+            margin-right: 2.5rem;
+        }
+    }
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include phones {
+        flex-wrap: wrap;
+    }
+
+    input[type=text] {
+        width: 400px;
+        max-width: calc((100% - 150px) / 2);
+        @include style-input(#6eac59);
+        @include phones {
+            width: 100%;
+            max-width: none;
+            margin: 1rem 0;
+        }
+    }
+
+    input[type=checkbox] {
+        margin-right: 1rem;
+    }
+}
+
+//module
+.module-subscribe {
+    height: 100%;
+
+    .style-input {
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    input[type=checkbox]{
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,29 @@
+.social {
+
+    &__inner {
+        padding-top: 4rem;
+        margin-top: 0;
+        border-top: 1px solid #c9c9c9;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+
+        @include tablets {
+            margin-bottom: 1rem;
+        }
+
+        img {
+            width: 47px;
+            margin-right: 2.3rem;
+        }
+
+        span {
+            color: #000;
+            font-size: 2rem;
+            text-decoration: underline;
+        }
+    }
+    
+}

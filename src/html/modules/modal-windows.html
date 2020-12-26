@@ -1,0 +1,91 @@
+<div class="modal-windows">
+    <div class="remodal" data-remodal-id="cart-added" data-remodal-options="hashTracking: false">
+
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <p class="remodal-title">Товар добавлен в корзину</p>
+
+        <div class="remodal-description">
+
+            <img src="./img/icon/cart-added.png" alt="">
+
+            <div class="buttons-control">
+                <a href="./cart.html">Перейти в корзину</a>
+                <a href="#" data-remodal-action="close">Продолжить покупки</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="remodal" data-remodal-id="fast-order" data-remodal-options="hashTracking: false">
+
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <p class="remodal-title">Быстрый заказ</p>
+
+        <div class="remodal-description">
+
+            <p class="form-title">Контакты</p>
+
+            <form action="" class="fast-order-form" method="POST">
+
+                <div class="ordering-client-block">
+                    <div class="ordering-field">
+                        <span class="required">*</span>
+                        <label for="first_name">Имя</label>
+                        <input type="text" id="first_name" placeholder="Мария" required>
+                    </div>
+
+                    <div class="ordering-field">
+                        <span class="required">*</span>
+                        <label for="phone">Телефон</label>
+                        <input type="text" id="phone" placeholder="" required>
+                    </div>
+                </div>
+
+
+                <div class="ordering-client-block agreement">
+
+                        <div class="ordering-field">
+                            <input type="checkbox" name="agreement[1]" id="agreement_1" required>
+                            <label for="agreement_1">Я прочитал и согласен с правилами <a href="">Заказ и возврат товара</a></label>
+                        </div>
+
+                        <div class="ordering-field">
+                            <input type="checkbox" name="agreement[2]" id="agreement_2" required>
+                            <label for="agreement_2">Я прочитал и согласен с правилами <a href="">политики обработки персональных данных</a></label>
+                        </div>
+
+                </div>
+
+
+                <input type="submit" value="Оформить заказ" class="btn-default">
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div class="remodal" data-remodal-id="success-order" data-remodal-options="hashTracking: false">
+
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <p class="remodal-title">Заказ отправлен</p>
+
+        <div class="remodal-description">
+
+            <img src="./img/icon/success-order.png" alt="">
+
+            <div class="success-order-text">
+                <p>Спасибо, ваш заказ принят в работу!</p>
+                <p>Мы свяжемся с вами по указанному телефону в ближайшее время.</p>
+            </div>
+
+            <a href="#" data-remodal-action="close" class="btn-default">Вернуться к сайту</a>
+        </div>
+
+    </div>
+
+</div>
